@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;     
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://i.pinimg.com/originals/1d/26/c5/1d26c5b022c071fb8f1e3ae2f0f65ba9.gif);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+nav{
+    width: 90%;
+    margin: auto;
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links ul li ::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #DD5353;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li :hover::after {
+    width: 100%;
+}
+
+.logo{
+    padding: 50px;
+    width: 80px;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 190px;    
+    /* height: 450px;           */
+    background: #A6D0E4;
+    border-radius: 10px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+    margin: 35px;
+    display: inline-block;
+}       
+
+.card:hover{
+    height: 450px;
+}
+
+.imageBox {
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;      
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    overflow: hidden;       
+    transition: 0.5s;
+}       
+.card:hover .imageBox{      
+    width: 250px;       
+    height: 250px;
+}
+
+
+.imageBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}    
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;   
+}
+
+.card .content .details {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    transition: 00.5s;              
+    transform: translateY(150px);
+}
+
+.card:hover .content .details {
+    transform: translateY(0px); 
+}
+
+.card .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.card .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.card .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card .content .details .data h3 {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin: auto;
+}
+
+.card .content .details .data h3 span {
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}       
+
+.card .content .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .content .details .actionBtn button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: #3E6D9C;
+    color: #fff;      
+    cursor: pointer;
+}   
+
+.progate {
+    text-decoration: none;
+}
+
+.card .content .details .actionBtn button:nth-child(2) {
+
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;   
+
+}   
+
+
+@media (max-width : 360px) {
+
+    .header{
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://thumbs.gfycat.com/ClutteredDentalHen-max-1mb.gif);
+    }
+
+    .nav-links ul li a{
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .logo{
+        padding: 40px;
+        width: 80px;
+    }
+    
+
+    .card {
+        position: relative;
+        width: 290px;
+        height: 190px;    
+        /* height: 450px;           */
+        background: #FFFAD7;
+        border-radius: 10px;
+        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+        transition: 0.5s;
+        margin: 35px;
+        display: inline-block;
+    }       
+}
+
+
+@media (max-width : 360px) {
+    .navbar{
+        width: 90%;
+        margin: auto;
+        padding: 45px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card .content .details .actionBtn button {
+        background: #E6CBA8;
+    }
+
+    .navbar{
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .logo{
+        padding: 40px;
+        width: 80px;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+}
+
+
+.loader-wrapper{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #fff;
+    border-radius: 2px;
+    animation: loader 3s infinite ease;
+
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #fff;
+    animation: loader-inner 3s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+         transform: rotate(0deg);
+    }
+    25% {
+         transform: rotate(180deg);
+    }
+    50% { 
+         transform: rotate(180deg);
+    }
+    75% { 
+         transform: rotate(360deg);
+    }
+    100% { 
+         transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% { 
+        height: 0%;
+    }
+    25% { 
+        height: 0%;
+    }
+    50% { 
+        height: 100%;
+    }
+    75% { 
+        height: 100%;
+    }
+    100% { 
+        height: 0%;
+    }
+}
